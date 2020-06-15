@@ -60,15 +60,15 @@ public class EmpWage {
                                         empHrs = 0;
                 }
                 totalEmpHrs += empHrs;
-                System.out.println("Day" + totalWorkingDays + "Emp Hr:" +empHrs);
-                System.out.println("Total="+ totalEmpHrs);
+                System.out.println("Day " + totalWorkingDays  + " Emp Hr: " + empHrs + " Daily Wage= "+ totalEmpHrs * companyEmpWage.empRatePerHour );
+
 
         }
                 return totalEmpHrs * companyEmpWage.empRatePerHour;
 }
 public static void main(String[] args)
 {
-		EmpWage empwage = new EmpWage();
+                EmpWage empwage = new EmpWage();
         empwage.addCompanyEmpWage("DMART",20,2,10);
         empwage.addCompanyEmpWage("RELIANCE",10,4,20);
         empwage.computeEmpWage();
